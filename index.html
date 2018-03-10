@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <link rel = "stylesheet" type="text/css" href="main.css">
+    <script src="javascript/main.js"></script>
+    <script src="https://pastebin.com/raw/c5EGBAb7"></script>
+  </head>
+  <body onload="init()">
+    <canvas id='canvasA'class = 'animation'></canvas>
+    <div class = "canvases">
+      <canvas id='canvasE'class = 'grid'></canvas>
+      <div class="clearfix"></div>
+      <canvas id='canvasP'class = 'grid'></canvas>
+    </div>
+    <div class="menu">
+      <div class="tab">
+        <button class="tablinks" onclick="switchTab(event, 'Play')" id="defaultOpen">Play</button>
+        <button class="tablinks" onclick="switchTab(event, 'Upgrades')">Upgrades</button>
+        <button class="tablinks" onclick="switchTab(event, 'Options')">Options</button>
+        <button class="tablinks" onclick="switchTab(event, 'Tutorial')">Tutorial</button>
+        <button class="tablinks" onclick="switchTab(event, 'Changelog')">Changelog</button>
+        <button class="tablinks" onclick="switchTab(event, 'Temp Debug')">Temp Debug</button>
+      </div>
+      <div id="Play" class="tabcontent">
+        <button onclick="attack()"> Single </button>
+        <button onclick="attack()"> Air Strike </button>
+        <button onclick="attack()"> Splash </button>
+        <button onclick="attack()"> Skip </button>
+      </div>
+      <div id="Upgrades" class="tabcontent">
+         <p id = "battleBucks">
+           You have : 100 Battle Bucks!
+        </p>
+         <button class="main" onclick = "change(-1);"> Spend BattleBucks! </button>
+         <button class="main" onclick = "change(1);"> get BattleBucks! </button>
+      </div>
+      <div id="Options" class="tabcontent">
+      </div>
+      <div class="tabcontent" id="Tutorial">
+      </div>
+      <div class="tabcontent" id="Changelog">
+      <h1>
+        3/8/2018
+      </h1>
+      <ul style="list-style-type:circle">
+        <li>Added attack buttons</li>
+        <li>Added upgrade buttons</li>
+        <li>Created input textbox where you can set # of players</li>
+      </ul>
+      <h1>
+        3/6/2018
+      </h1>
+      <ul style="list-style-type:circle">
+        <li>Adjusted width of canvas</li>
+        <li>Implemented colors to player grids</li>
+        <li>Added main game tabs</li>
+      </ul>
+      </div>
+      <div class="tabcontent" id="Temp Debug">
+        <button class="main" onclick = "clearCanvas();"> Clear </button>
+        <br>
+        <button class="main" onclick = "arenaSetup();"> Create Grid </button>
+        <input id = "debugInput">
+      </div>
+    </div>
+    <div class = "clearfix"></div>
+  </body>
+</html>
